@@ -1,0 +1,6 @@
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding-left: 10px; 
+  height: 6vh;
+}
