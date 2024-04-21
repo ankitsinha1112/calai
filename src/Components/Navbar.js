@@ -62,9 +62,9 @@ export const Navbar = (props) => {
     </div>
     <div className="hidden lg:flex lg:gap-x-12">
         {navigation.map((item) => (
-            <a key={item.name} href={item.href} onClick={() => logout(item)} className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to={item.href} key={item.name} onClick={() => logout(item)} className="text-sm font-semibold leading-6 text-gray-900">
                 {item.name}
-            </a>
+            </Link>
         ))}
 
     </div>
@@ -102,13 +102,12 @@ export const Navbar = (props) => {
                         (item.name === 'LogOut') ?
                             null
                             :
-                            <a
+                            <Link to={item.href} 
                                 key={item.name}
-                                href={item.href}
                                 className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                             >
                                 {item.name}
-                            </a>
+                            </Link>
                     ))}
                     <a
                         onClick={logout}
